@@ -1,0 +1,2 @@
+An experiment creating html div elements from image pixels, pulling each pixel colour from the original image and colouring each div.
+It needs a fast machine to run.
