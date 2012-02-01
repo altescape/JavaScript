@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Inline text resizer</title>
+<style type='text/css'>
+    h1{clear:both;}
+.slider {
+    background: white;
+height: 16px;
+width: 200px;
+box-shadow: 0 0 7px rgba(0,0,0,0.7) inset,0 8px 3px rgba(0,0,0,0.1) inset;
+border-radius: 3px;
+border-bottom: 1px solid black;
+border-top: 1px solid white;
+}
+.slider .knob,.slider .knob2 {
+    background: black;
+width: 25px;
+height: 15px;
+box-shadow: 0 0 4px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.4) inset, 0 0 7px rgba(0,0,0,0.7) inset,0 8px 3px rgba(0,0,0,0.2) inset,0 6px 8px rgba(255,255,255,0.5) inset,0 3px 3px rgba(255,255,255,0.4) inset;
+border-radius: 2px 2px 0 0;
+top: 1px;
+    -webkit-transition: all 0.1s linear
+}
+.slider .knob:hover,.slider .knob2:hover{box-shadow:none;cursor:pointer}
+.container{
+font-family: arial;
+font-size: 10px;
+background: none repeat scroll 0 0 #EEE;
+padding: 15px;
+width: 200px;}
+#fontSize {
+background: none repeat scroll 0 0 #EEE;
+clear: both;
+padding: 25px;
+-webkit-transition: all 0.1s linear;
+position: absolute;
+top: 0;
+right: 0;
+width: 395px;}
+#fontSizeValueContainer{
+    
+    font-size: 11px;
+}
+
+.advanced {
+    width: 200px;
+    margin: 1px 0 0 0;
+    background: #CCC;
+}
+.advanced .knob {
+    cursor: pointer;
+}
+#red .knob {
+    background: red;
+}
+#green .knob {
+    background: green;
+}
+#blue .knob {
+    background: blue;
+}
+
+
+
+  </style>
+<script src="mootools.js"></script>
+<script type='text/javascript'>//<![CDATA[ 
+window.addEvent('load', function() {
+window.addEvent('domready', function() {
+
+    var slider = $('slider');
+
+    new Slider(slider, slider.getElement('.knob'), {
+        range: [12, 72],
+        initialStep: 18,
+        onChange: function(value) {
+            if (value) {
+                $('fontSize').setStyle('font-size', value);
+                $('fontSizeValue').set('html', value);
+            }
+        },
+        steps: 6
+    });
+
+    var slider2 = $('slider2');
+
+    new Slider(slider2, slider2.getElement('.knob'), {
+        range: [0, 100],
+        initialStep: 24,
+        onChange: function(value) {
+            if (value) {
+                $('fontSize').setStyle('line-height', value);
+                $('fontLineHeightValue').set('html', value);
+            }
+        },
+        steps: 12
+    });
+
+
+
+    var color = [0, 0, 0];
+
+    $$('.advanced.slider').each(function(slider, i) {
+        new Slider(slider, slider.getElement('.knob'), {
+            steps: 255,
+            wheel: true,
+            onChange: function() {
+                color[i] = this.step;
+                $('fontSize').setStyle('color', color);
+                $('setColor').set('text', color.rgbToHex());
+            }
+        });
+    });
+
+});
+
+});//]]>  
+
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="fontSizeValueContainer">Font size: <span id="fontSizeValue"></span>px</div>
+    <div id="slider" class="slider">
+        <div class="knob"></div>
+    </div>
+</div>
+<div class="container">
+    <div class="fontSizeValueContainer">Line height: <span id="fontLineHeightValue"></span>px</div>
+    <div id="slider2" class="slider">
+        <div class="knob"></div>
+    </div>
+</div>
+<div class="container">
+    <p>Selected color: <span id="setColor"></span></p>
+    <div id="red" class="advanced slider">
+        <div class="knob"></div>
+    </div>
+    <div id="green" class="advanced slider">
+        <div class="knob"></div>
+    </div>
+    <div id="blue" class="advanced slider">
+        <div class="knob"></div>
+    </div>
+</div>
+
+<div id="fontSize">Change the value, to change the fontsize. This demonstrates the amazing mootools thingy majiggy, I'm typing this so that the paragraph will go on two lines</div>
+
+  
+</body>
+
+
+</html>
