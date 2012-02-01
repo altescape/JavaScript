@@ -1,0 +1,99 @@
+<script>
+<!--
+window.addEventListener('load', function () {
+	
+	// Get the canvas element.
+	var myCanvas = document.getElementById('myCanvas');
+	// get holder element
+	var holder = document.getElementById('holder');
+	// get button element
+	var zoom = document.getElementById('zoom');
+	var rotate = document.getElementById('rotate');
+	var reset = document.getElementById('reset');
+
+	if (!myCanvas || !myCanvas.getContext) {return}
+
+	// Get the canvas 2d context.
+	var context = myCanvas.getContext('2d');
+	if (!context || !context.getImageData || !context.putImageData || !context.drawImage) {return}
+
+	// Create a new image.
+	var img = new Image();
+
+	// Once it's loaded draw the image on canvas and invert the colors.
+	img.addEventListener('load', function () {
+	
+		var x = 0, y = 0;
+		// Draw the image on canvas.
+		context.drawImage(this, x, y);
+		// Get the pixels.
+		var imgd = context.getImageData(x, y, this.width, this.height);
+		var pix = imgd.data;
+		// Loop over each pixel and invert the color.
+		for (var i = 0, n = pix.length; i < n; i += 4) {
+			//pix[i ] = 255 - pix[i ]; // red
+			//pix[i+1] = 255 - pix[i+1]; // green
+			//pix[i+2] = 255 - pix[i+2]; // blue
+			// i+3 is alpha (the fourth element)
+			var e = document.createElement('div');
+			e.setAttribute('style','background:rgba('+pix[i ]+','+pix[i+1]+','+pix[i+2]+',1)');
+			holder.appendChild(e);
+		}
+		// Draw the ImageData object.
+		context.putImageData(imgd, x, y);
+		
+		var imgHeight = imgd.height;
+		var imgWidth = imgd.width;
+		var imgTot = imgHeight * imgWidth;
+		
+		for (var i = 0; i <= 10000; i++){
+			//console.log(1);
+			
+		}
+		
+		
+	}, false);
+	
+	zoom.addEventListener('click', function(){
+		holder.className+="zoom ";
+	}, false);
+	rotate.addEventListener('click', function(){
+		holder.className+="rotate ";
+	}, false);
+	reset.addEventListener('click', function(){
+		holder.className="";
+	}, false);
+
+	img.src = '1.png';
+}, false);
+// -->
+</script>
+<style>
+body{margin:0;background:black;}
+#myCanvas{display:none}
+#holder{
+	width:64px;
+	height:64px;
+	-webkit-transition:all 0.3s linear;
+	zoom:1;
+}
+#holder.zoom{zoom:20;}
+#holder div{
+	width:1px;
+	height:1px;
+	float:left;
+	-webkit-transition:all 0.3s linear;
+	
+}
+#holder.rotate div{-webkit-transform:rotate(35deg);}
+#holder div:hover{
+	cursor:pointer;
+	-webkit-transform:skewx(10deg) translatey(-150px) rotate(180deg);
+	-webkit-transform-origin: bottom left;}
+
+</style>
+<button id="zoom">Zoom</button>
+<button id="rotate">Rotate</button>
+<button id="reset">Reset</button>
+<canvas id="myCanvas" width="64" height="64">Your browser does not have support for Canvas.</canvas>
+<div id="holder"></div>
