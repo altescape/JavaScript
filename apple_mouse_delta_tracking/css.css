@@ -1,0 +1,66 @@
+body{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;}
+#debug{
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 80%;
+	background: black;
+	padding: 2em;
+}
+#debug p{
+	padding: 1em;
+	margin: 0.5em;
+	background: whiteSmoke;
+	float: left;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 100px;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 1);
+	height: 40px;
+	width: 40px;
+	min-height: 40px;
+	letter-spacing:2px}
+#debug p.highlighted{background:#AAA}
+#debug p#pos.highlighted,
+#debug p#neg.highlighted{background:#222;color:whitesmoke}
+#outputContainer{
+	position: absolute;
+	width: auto;
+	min-height: 500px;
+	background: whiteSmoke;
+	float: left;
+	overflow: hidden;
+	opacity: 0.8;
+	top: 0;
+	bottom: 0;
+	left: 20%;
+	right: 0;}
+#output{
+	float:left;
+	padding:0;
+	margin:0;
+	position:absolute;
+	top: 0%;
+	left: 0%;
+	/*
+	right: 0%;
+	bottom: 0%;
+	*/
+	height:100px;
+	width:100px;
+	border-radius:3px;
+	background: red;
+	opacity:0.8;
+}
+/*
+div#output.down{height:200px}
+div#output.up{height:100px}
+div#output.left{width:200px}
+div#output.right{width:100px}
+*/
