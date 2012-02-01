@@ -1,0 +1,1963 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'>
+	<title>CSS3 Transitions</title>
+	<style media="all" type="text/css">
+		* { margin:0; padding:0; }
+
+		body { 
+			font-family : Helvetica, Arial, sans-serif;
+			background : #fff; 
+			height:100%;
+			width:100%;
+			overflow:hidden;
+		}
+		
+		h1 { 
+			color:#000; 
+			font-size:24px;
+			position:absolute;
+			left:50%;
+			top:50%;
+			margin-left:-125px;
+			margin-top:-75px;
+			width:250px;
+			height:150px;
+			line-height:150px;
+			background:#f90;
+			background: -moz-linear-gradient(100% 100% 9deg, #f90, #f30);
+			background: -webkit-gradient(linear, left top, left bottom, from(#f90), to(#f30));
+			text-shadow: 2px 2px 2px #f90;
+			border-radius:25px;
+			z-index:30;
+			text-align:center;
+		}
+		
+		p.el {
+			position:absolute;
+			text-align:center;
+		}
+		
+		
+			@-webkit-keyframes el-0 {
+			 from {
+			   	background:rgba(205, 241, 10, 0.78);
+				left:26%;
+				top:29%;
+				width:79px;
+				height:57px;
+				z-index:40;
+				line-height:57px;
+			   	opacity:0.39;
+			  	text-shadow: rgba(10, 47, 82, 0.3) 3px -2px 5px;
+			   	-webkit-transform: scale(1.38) rotate(140deg);
+			 }
+			 to {
+			   	background:rgba(45, 218, 10, 0.42);
+				left:96%;
+				top:46%;
+				width:31px;
+				height:57px;
+				z-index:30;
+				line-height:57px;
+			   	opacity:0.09;
+			  	text-shadow: rgba(77, 74, 30, 0.23) 6px -3px 3px;
+			   	-webkit-transform: scale(0.82) rotate(182deg);				
+			 }
+			}
+			
+			p#el-0 {
+				-webkit-animation-name: el-0;
+				-webkit-animation-duration: 7s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-1 {
+			 from {
+			   	background:rgba(74, 242, 42, 0.75);
+				left:77%;
+				top:46%;
+				width:99px;
+				height:25px;
+				z-index:48;
+				line-height:25px;
+			   	opacity:0.93;
+			  	text-shadow: rgba(85, 34, 11, 0.71) 4px -6px 7px;
+			   	-webkit-transform: scale(1.34) rotate(241deg);
+			 }
+			 to {
+			   	background:rgba(67, 235, 113, 0.01);
+				left:22%;
+				top:67%;
+				width:64px;
+				height:25px;
+				z-index:24;
+				line-height:25px;
+			   	opacity:0.94;
+			  	text-shadow: rgba(87, 96, 50, 0.93) 3px -5px 1px;
+			   	-webkit-transform: scale(0.5) rotate(79deg);				
+			 }
+			}
+			
+			p#el-1 {
+				-webkit-animation-name: el-1;
+				-webkit-animation-duration: 7s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-2 {
+			 from {
+			   	background:rgba(45, 125, 217, 0.52);
+				left:59%;
+				top:56%;
+				width:92px;
+				height:100px;
+				z-index:6;
+				line-height:100px;
+			   	opacity:0.24;
+			  	text-shadow: rgba(73, 79, 50, 0.65) 3px -6px 9px;
+			   	-webkit-transform: scale(1.41) rotate(17deg);
+			 }
+			 to {
+			   	background:rgba(86, 216, 234, 0.31);
+				left:35%;
+				top:85%;
+				width:65px;
+				height:100px;
+				z-index:40;
+				line-height:100px;
+			   	opacity:0.94;
+			  	text-shadow: rgba(57, 2, 50, 0.56) 2px -10px 5px;
+			   	-webkit-transform: scale(1.21) rotate(210deg);				
+			 }
+			}
+			
+			p#el-2 {
+				-webkit-animation-name: el-2;
+				-webkit-animation-duration: 10s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-3 {
+			 from {
+			   	background:rgba(179, 51, 86, 0.49);
+				left:69%;
+				top:98%;
+				width:78px;
+				height:68px;
+				z-index:10;
+				line-height:68px;
+			   	opacity:0.85;
+			  	text-shadow: rgba(62, 24, 19, 0.47) 2px -5px 9px;
+			   	-webkit-transform: scale(0.51) rotate(19deg);
+			 }
+			 to {
+			   	background:rgba(157, 245, 159, 0.63);
+				left:46%;
+				top:18%;
+				width:87px;
+				height:68px;
+				z-index:23;
+				line-height:68px;
+			   	opacity:0.58;
+			  	text-shadow: rgba(54, 4, 55, 0.15) 8px -8px 5px;
+			   	-webkit-transform: scale(0.72) rotate(158deg);				
+			 }
+			}
+			
+			p#el-3 {
+				-webkit-animation-name: el-3;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-4 {
+			 from {
+			   	background:rgba(162, 82, 145, 0.87);
+				left:51%;
+				top:4%;
+				width:22px;
+				height:96px;
+				z-index:1;
+				line-height:96px;
+			   	opacity:0.85;
+			  	text-shadow: rgba(5, 6, 47, 0.01) 7px -2px 5px;
+			   	-webkit-transform: scale(1.36) rotate(335deg);
+			 }
+			 to {
+			   	background:rgba(234, 113, 120, 0.95);
+				left:99%;
+				top:61%;
+				width:75px;
+				height:96px;
+				z-index:37;
+				line-height:96px;
+			   	opacity:0.09;
+			  	text-shadow: rgba(91, 18, 55, 0.85) 9px -9px 5px;
+			   	-webkit-transform: scale(1.19) rotate(137deg);				
+			 }
+			}
+			
+			p#el-4 {
+				-webkit-animation-name: el-4;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-5 {
+			 from {
+			   	background:rgba(98, 80, 198, 0.44);
+				left:78%;
+				top:78%;
+				width:29px;
+				height:78px;
+				z-index:45;
+				line-height:78px;
+			   	opacity:0.25;
+			  	text-shadow: rgba(97, 81, 16, 0.42) 3px -2px 5px;
+			   	-webkit-transform: scale(1.39) rotate(287deg);
+			 }
+			 to {
+			   	background:rgba(39, 250, 181, 0.33);
+				left:53%;
+				top:56%;
+				width:31px;
+				height:78px;
+				z-index:20;
+				line-height:78px;
+			   	opacity:0.98;
+			  	text-shadow: rgba(83, 77, 45, 0.56) 2px -8px 4px;
+			   	-webkit-transform: scale(1.1) rotate(195deg);				
+			 }
+			}
+			
+			p#el-5 {
+				-webkit-animation-name: el-5;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-6 {
+			 from {
+			   	background:rgba(109, 90, 179, 0.24);
+				left:51%;
+				top:12%;
+				width:62px;
+				height:78px;
+				z-index:32;
+				line-height:78px;
+			   	opacity:0.53;
+			  	text-shadow: rgba(41, 42, 68, 0.39) 2px -1px 10px;
+			   	-webkit-transform: scale(1.19) rotate(53deg);
+			 }
+			 to {
+			   	background:rgba(79, 173, 250, 0.09);
+				left:13%;
+				top:54%;
+				width:39px;
+				height:78px;
+				z-index:45;
+				line-height:78px;
+			   	opacity:0.86;
+			  	text-shadow: rgba(84, 43, 97, 0.57) 9px -4px 3px;
+			   	-webkit-transform: scale(0.59) rotate(303deg);				
+			 }
+			}
+			
+			p#el-6 {
+				-webkit-animation-name: el-6;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-7 {
+			 from {
+			   	background:rgba(119, 234, 5, 0.88);
+				left:60%;
+				top:40%;
+				width:21px;
+				height:69px;
+				z-index:31;
+				line-height:69px;
+			   	opacity:0.32;
+			  	text-shadow: rgba(70, 75, 62, 0.39) 8px -8px 6px;
+			   	-webkit-transform: scale(0.77) rotate(343deg);
+			 }
+			 to {
+			   	background:rgba(101, 36, 204, 0.82);
+				left:12%;
+				top:36%;
+				width:74px;
+				height:69px;
+				z-index:23;
+				line-height:69px;
+			   	opacity:0.63;
+			  	text-shadow: rgba(76, 29, 2, 0.37) 8px -10px 4px;
+			   	-webkit-transform: scale(1.14) rotate(188deg);				
+			 }
+			}
+			
+			p#el-7 {
+				-webkit-animation-name: el-7;
+				-webkit-animation-duration: 9s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-8 {
+			 from {
+			   	background:rgba(33, 28, 93, 0.88);
+				left:73%;
+				top:74%;
+				width:69px;
+				height:73px;
+				z-index:22;
+				line-height:73px;
+			   	opacity:0.26;
+			  	text-shadow: rgba(88, 39, 65, 0.03) 2px -5px 2px;
+			   	-webkit-transform: scale(1.05) rotate(53deg);
+			 }
+			 to {
+			   	background:rgba(150, 46, 233, 0.87);
+				left:19%;
+				top:29%;
+				width:70px;
+				height:73px;
+				z-index:6;
+				line-height:73px;
+			   	opacity:0.67;
+			  	text-shadow: rgba(27, 64, 47, 0.92) 8px -6px 3px;
+			   	-webkit-transform: scale(1.15) rotate(109deg);				
+			 }
+			}
+			
+			p#el-8 {
+				-webkit-animation-name: el-8;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-9 {
+			 from {
+			   	background:rgba(190, 74, 39, 0.14);
+				left:93%;
+				top:18%;
+				width:46px;
+				height:41px;
+				z-index:21;
+				line-height:41px;
+			   	opacity:0.32;
+			  	text-shadow: rgba(87, 56, 91, 0.06) 5px -8px 3px;
+			   	-webkit-transform: scale(1.26) rotate(148deg);
+			 }
+			 to {
+			   	background:rgba(93, 110, 173, 0.99);
+				left:89%;
+				top:60%;
+				width:81px;
+				height:41px;
+				z-index:24;
+				line-height:41px;
+			   	opacity:0.88;
+			  	text-shadow: rgba(41, 77, 91, 0.67) 6px -3px 9px;
+			   	-webkit-transform: scale(1.16) rotate(50deg);				
+			 }
+			}
+			
+			p#el-9 {
+				-webkit-animation-name: el-9;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-10 {
+			 from {
+			   	background:rgba(142, 84, 219, 0.12);
+				left:24%;
+				top:91%;
+				width:67px;
+				height:99px;
+				z-index:2;
+				line-height:99px;
+			   	opacity:0.16;
+			  	text-shadow: rgba(34, 43, 52, 0.77) 2px -6px 7px;
+			   	-webkit-transform: scale(1.21) rotate(101deg);
+			 }
+			 to {
+			   	background:rgba(35, 151, 177, 0.91);
+				left:50%;
+				top:37%;
+				width:54px;
+				height:99px;
+				z-index:36;
+				line-height:99px;
+			   	opacity:0.19;
+			  	text-shadow: rgba(9, 84, 20, 0.07) 4px -6px 10px;
+			   	-webkit-transform: scale(1.01) rotate(273deg);				
+			 }
+			}
+			
+			p#el-10 {
+				-webkit-animation-name: el-10;
+				-webkit-animation-duration: 9s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-11 {
+			 from {
+			   	background:rgba(199, 252, 113, 0.22);
+				left:50%;
+				top:22%;
+				width:46px;
+				height:28px;
+				z-index:1;
+				line-height:28px;
+			   	opacity:0.88;
+			  	text-shadow: rgba(3, 30, 3, 0.62) 10px -10px 2px;
+			   	-webkit-transform: scale(0.86) rotate(130deg);
+			 }
+			 to {
+			   	background:rgba(211, 140, 113, 0.67);
+				left:74%;
+				top:50%;
+				width:25px;
+				height:28px;
+				z-index:14;
+				line-height:28px;
+			   	opacity:0.42;
+			  	text-shadow: rgba(58, 2, 25, 0.68) 8px -3px 2px;
+			   	-webkit-transform: scale(0.51) rotate(265deg);				
+			 }
+			}
+			
+			p#el-11 {
+				-webkit-animation-name: el-11;
+				-webkit-animation-duration: 5s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-12 {
+			 from {
+			   	background:rgba(193, 58, 93, 0.06);
+				left:25%;
+				top:98%;
+				width:24px;
+				height:47px;
+				z-index:10;
+				line-height:47px;
+			   	opacity:0.11;
+			  	text-shadow: rgba(41, 54, 93, 0.95) 10px -7px 8px;
+			   	-webkit-transform: scale(0.99) rotate(242deg);
+			 }
+			 to {
+			   	background:rgba(246, 232, 65, 0.98);
+				left:16%;
+				top:93%;
+				width:83px;
+				height:47px;
+				z-index:20;
+				line-height:47px;
+			   	opacity:0.07;
+			  	text-shadow: rgba(79, 13, 41, 0.13) 9px -7px 5px;
+			   	-webkit-transform: scale(1.44) rotate(318deg);				
+			 }
+			}
+			
+			p#el-12 {
+				-webkit-animation-name: el-12;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-13 {
+			 from {
+			   	background:rgba(16, 148, 102, 0.6);
+				left:51%;
+				top:36%;
+				width:67px;
+				height:100px;
+				z-index:6;
+				line-height:100px;
+			   	opacity:0.06;
+			  	text-shadow: rgba(8, 78, 3, 0.97) 1px -1px 2px;
+			   	-webkit-transform: scale(1.48) rotate(282deg);
+			 }
+			 to {
+			   	background:rgba(134, 10, 147, 0.65);
+				left:44%;
+				top:70%;
+				width:62px;
+				height:100px;
+				z-index:4;
+				line-height:100px;
+			   	opacity:0.19;
+			  	text-shadow: rgba(47, 95, 66, 0.46) 1px -3px 9px;
+			   	-webkit-transform: scale(1.12) rotate(269deg);				
+			 }
+			}
+			
+			p#el-13 {
+				-webkit-animation-name: el-13;
+				-webkit-animation-duration: 4s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-14 {
+			 from {
+			   	background:rgba(218, 70, 72, 0.63);
+				left:29%;
+				top:26%;
+				width:74px;
+				height:36px;
+				z-index:15;
+				line-height:36px;
+			   	opacity:0.39;
+			  	text-shadow: rgba(64, 8, 91, 0.67) 7px -6px 2px;
+			   	-webkit-transform: scale(0.85) rotate(32deg);
+			 }
+			 to {
+			   	background:rgba(51, 138, 142, 0.16);
+				left:20%;
+				top:1%;
+				width:34px;
+				height:36px;
+				z-index:22;
+				line-height:36px;
+			   	opacity:0.86;
+			  	text-shadow: rgba(80, 19, 8, 0.01) 1px -4px 3px;
+			   	-webkit-transform: scale(1.17) rotate(231deg);				
+			 }
+			}
+			
+			p#el-14 {
+				-webkit-animation-name: el-14;
+				-webkit-animation-duration: 7s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-15 {
+			 from {
+			   	background:rgba(239, 239, 250, 0.02);
+				left:84%;
+				top:65%;
+				width:73px;
+				height:47px;
+				z-index:21;
+				line-height:47px;
+			   	opacity:0.77;
+			  	text-shadow: rgba(2, 50, 97, 0.55) 1px -2px 8px;
+			   	-webkit-transform: scale(0.56) rotate(110deg);
+			 }
+			 to {
+			   	background:rgba(48, 237, 27, 0.37);
+				left:1%;
+				top:12%;
+				width:52px;
+				height:47px;
+				z-index:18;
+				line-height:47px;
+			   	opacity:0.4;
+			  	text-shadow: rgba(8, 99, 94, 0.42) 10px -9px 4px;
+			   	-webkit-transform: scale(1.44) rotate(260deg);				
+			 }
+			}
+			
+			p#el-15 {
+				-webkit-animation-name: el-15;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-16 {
+			 from {
+			   	background:rgba(34, 210, 156, 0.63);
+				left:79%;
+				top:16%;
+				width:75px;
+				height:68px;
+				z-index:47;
+				line-height:68px;
+			   	opacity:0.9;
+			  	text-shadow: rgba(74, 23, 10, 0.67) 4px -5px 7px;
+			   	-webkit-transform: scale(0.95) rotate(314deg);
+			 }
+			 to {
+			   	background:rgba(8, 216, 243, 0.03);
+				left:78%;
+				top:37%;
+				width:96px;
+				height:68px;
+				z-index:33;
+				line-height:68px;
+			   	opacity:0.75;
+			  	text-shadow: rgba(88, 38, 80, 0.49) 6px -7px 1px;
+			   	-webkit-transform: scale(0.64) rotate(151deg);				
+			 }
+			}
+			
+			p#el-16 {
+				-webkit-animation-name: el-16;
+				-webkit-animation-duration: 5s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-17 {
+			 from {
+			   	background:rgba(88, 43, 146, 0.57);
+				left:26%;
+				top:25%;
+				width:93px;
+				height:86px;
+				z-index:37;
+				line-height:86px;
+			   	opacity:0.92;
+			  	text-shadow: rgba(36, 60, 95, 0.2) 6px -10px 10px;
+			   	-webkit-transform: scale(1.42) rotate(334deg);
+			 }
+			 to {
+			   	background:rgba(163, 172, 208, 0.02);
+				left:48%;
+				top:30%;
+				width:62px;
+				height:86px;
+				z-index:6;
+				line-height:86px;
+			   	opacity:0.4;
+			  	text-shadow: rgba(67, 52, 66, 0.49) 9px -9px 1px;
+			   	-webkit-transform: scale(0.94) rotate(33deg);				
+			 }
+			}
+			
+			p#el-17 {
+				-webkit-animation-name: el-17;
+				-webkit-animation-duration: 5s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-18 {
+			 from {
+			   	background:rgba(209, 60, 180, 0.42);
+				left:19%;
+				top:90%;
+				width:98px;
+				height:48px;
+				z-index:9;
+				line-height:48px;
+			   	opacity:0.88;
+			  	text-shadow: rgba(88, 9, 52, 0.55) 10px -6px 1px;
+			   	-webkit-transform: scale(0.7) rotate(24deg);
+			 }
+			 to {
+			   	background:rgba(33, 155, 188, 0.65);
+				left:27%;
+				top:23%;
+				width:61px;
+				height:48px;
+				z-index:5;
+				line-height:48px;
+			   	opacity:0.29;
+			  	text-shadow: rgba(95, 19, 60, 0.3) 1px -9px 1px;
+			   	-webkit-transform: scale(0.93) rotate(5deg);				
+			 }
+			}
+			
+			p#el-18 {
+				-webkit-animation-name: el-18;
+				-webkit-animation-duration: 10s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-19 {
+			 from {
+			   	background:rgba(46, 201, 70, 0.27);
+				left:31%;
+				top:82%;
+				width:33px;
+				height:51px;
+				z-index:43;
+				line-height:51px;
+			   	opacity:0.85;
+			  	text-shadow: rgba(38, 91, 97, 0.98) 7px -7px 3px;
+			   	-webkit-transform: scale(1.38) rotate(50deg);
+			 }
+			 to {
+			   	background:rgba(90, 42, 25, 0.54);
+				left:76%;
+				top:40%;
+				width:64px;
+				height:51px;
+				z-index:30;
+				line-height:51px;
+			   	opacity:0.4;
+			  	text-shadow: rgba(98, 60, 30, 0.38) 8px -1px 7px;
+			   	-webkit-transform: scale(0.54) rotate(140deg);				
+			 }
+			}
+			
+			p#el-19 {
+				-webkit-animation-name: el-19;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-20 {
+			 from {
+			   	background:rgba(60, 83, 152, 0.15);
+				left:30%;
+				top:58%;
+				width:83px;
+				height:37px;
+				z-index:47;
+				line-height:37px;
+			   	opacity:0.83;
+			  	text-shadow: rgba(66, 7, 18, 0.82) 2px -8px 6px;
+			   	-webkit-transform: scale(1.06) rotate(99deg);
+			 }
+			 to {
+			   	background:rgba(43, 244, 66, 0.77);
+				left:26%;
+				top:63%;
+				width:64px;
+				height:37px;
+				z-index:18;
+				line-height:37px;
+			   	opacity:0.28;
+			  	text-shadow: rgba(59, 73, 75, 0.81) 10px -1px 5px;
+			   	-webkit-transform: scale(0.61) rotate(134deg);				
+			 }
+			}
+			
+			p#el-20 {
+				-webkit-animation-name: el-20;
+				-webkit-animation-duration: 10s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-21 {
+			 from {
+			   	background:rgba(77, 207, 142, 0.37);
+				left:98%;
+				top:38%;
+				width:62px;
+				height:92px;
+				z-index:36;
+				line-height:92px;
+			   	opacity:0.95;
+			  	text-shadow: rgba(9, 98, 13, 0.05) 3px -9px 3px;
+			   	-webkit-transform: scale(1.38) rotate(157deg);
+			 }
+			 to {
+			   	background:rgba(164, 39, 9, 0.37);
+				left:90%;
+				top:84%;
+				width:47px;
+				height:92px;
+				z-index:49;
+				line-height:92px;
+			   	opacity:0.25;
+			  	text-shadow: rgba(45, 35, 23, 0.35) 7px -1px 9px;
+			   	-webkit-transform: scale(0.51) rotate(9deg);				
+			 }
+			}
+			
+			p#el-21 {
+				-webkit-animation-name: el-21;
+				-webkit-animation-duration: 5s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-22 {
+			 from {
+			   	background:rgba(189, 59, 162, 0.72);
+				left:35%;
+				top:67%;
+				width:98px;
+				height:64px;
+				z-index:13;
+				line-height:64px;
+			   	opacity:0.97;
+			  	text-shadow: rgba(84, 68, 61, 0.99) 8px -10px 9px;
+			   	-webkit-transform: scale(1.06) rotate(117deg);
+			 }
+			 to {
+			   	background:rgba(221, 205, 197, 0.22);
+				left:4%;
+				top:12%;
+				width:89px;
+				height:64px;
+				z-index:4;
+				line-height:64px;
+			   	opacity:0.02;
+			  	text-shadow: rgba(87, 10, 29, 0.43) 9px -6px 1px;
+			   	-webkit-transform: scale(1.06) rotate(316deg);				
+			 }
+			}
+			
+			p#el-22 {
+				-webkit-animation-name: el-22;
+				-webkit-animation-duration: 8s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-23 {
+			 from {
+			   	background:rgba(30, 181, 93, 0.79);
+				left:32%;
+				top:36%;
+				width:61px;
+				height:62px;
+				z-index:16;
+				line-height:62px;
+			   	opacity:0.25;
+			  	text-shadow: rgba(7, 63, 12, 0.87) 5px -4px 10px;
+			   	-webkit-transform: scale(1.02) rotate(68deg);
+			 }
+			 to {
+			   	background:rgba(247, 137, 18, 0.07);
+				left:82%;
+				top:49%;
+				width:92px;
+				height:62px;
+				z-index:18;
+				line-height:62px;
+			   	opacity:0.55;
+			  	text-shadow: rgba(45, 23, 29, 0.96) 4px -10px 4px;
+			   	-webkit-transform: scale(0.64) rotate(112deg);				
+			 }
+			}
+			
+			p#el-23 {
+				-webkit-animation-name: el-23;
+				-webkit-animation-duration: 8s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-24 {
+			 from {
+			   	background:rgba(158, 239, 183, 0.25);
+				left:5%;
+				top:58%;
+				width:72px;
+				height:72px;
+				z-index:19;
+				line-height:72px;
+			   	opacity:0.49;
+			  	text-shadow: rgba(17, 56, 45, 0.7) 7px -6px 6px;
+			   	-webkit-transform: scale(0.62) rotate(146deg);
+			 }
+			 to {
+			   	background:rgba(226, 173, 218, 0.11);
+				left:95%;
+				top:82%;
+				width:56px;
+				height:72px;
+				z-index:48;
+				line-height:72px;
+			   	opacity:0.16;
+			  	text-shadow: rgba(59, 26, 84, 0.25) 9px -8px 10px;
+			   	-webkit-transform: scale(0.62) rotate(298deg);				
+			 }
+			}
+			
+			p#el-24 {
+				-webkit-animation-name: el-24;
+				-webkit-animation-duration: 7s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-25 {
+			 from {
+			   	background:rgba(52, 8, 242, 0.76);
+				left:48%;
+				top:65%;
+				width:52px;
+				height:82px;
+				z-index:50;
+				line-height:82px;
+			   	opacity:0.19;
+			  	text-shadow: rgba(52, 40, 7, 0.2) 3px -2px 2px;
+			   	-webkit-transform: scale(0.57) rotate(228deg);
+			 }
+			 to {
+			   	background:rgba(28, 58, 58, 0.37);
+				left:7%;
+				top:47%;
+				width:39px;
+				height:82px;
+				z-index:43;
+				line-height:82px;
+			   	opacity:0.43;
+			  	text-shadow: rgba(37, 67, 97, 0.15) 9px -10px 1px;
+			   	-webkit-transform: scale(1.14) rotate(173deg);				
+			 }
+			}
+			
+			p#el-25 {
+				-webkit-animation-name: el-25;
+				-webkit-animation-duration: 9s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-26 {
+			 from {
+			   	background:rgba(122, 240, 145, 0.87);
+				left:1%;
+				top:76%;
+				width:30px;
+				height:23px;
+				z-index:10;
+				line-height:23px;
+			   	opacity:0.92;
+			  	text-shadow: rgba(21, 82, 4, 0.43) 1px -5px 6px;
+			   	-webkit-transform: scale(1.01) rotate(235deg);
+			 }
+			 to {
+			   	background:rgba(89, 240, 7, 0.02);
+				left:91%;
+				top:18%;
+				width:92px;
+				height:23px;
+				z-index:46;
+				line-height:23px;
+			   	opacity:0.27;
+			  	text-shadow: rgba(53, 39, 3, 0.57) 9px -10px 2px;
+			   	-webkit-transform: scale(1.25) rotate(349deg);				
+			 }
+			}
+			
+			p#el-26 {
+				-webkit-animation-name: el-26;
+				-webkit-animation-duration: 10s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-27 {
+			 from {
+			   	background:rgba(40, 212, 22, 0.97);
+				left:86%;
+				top:51%;
+				width:21px;
+				height:91px;
+				z-index:14;
+				line-height:91px;
+			   	opacity:0.02;
+			  	text-shadow: rgba(53, 91, 37, 0.47) 10px -4px 4px;
+			   	-webkit-transform: scale(0.61) rotate(99deg);
+			 }
+			 to {
+			   	background:rgba(75, 99, 207, 0.68);
+				left:41%;
+				top:38%;
+				width:64px;
+				height:91px;
+				z-index:19;
+				line-height:91px;
+			   	opacity:0.52;
+			  	text-shadow: rgba(30, 34, 42, 0.18) 5px -3px 3px;
+			   	-webkit-transform: scale(0.96) rotate(40deg);				
+			 }
+			}
+			
+			p#el-27 {
+				-webkit-animation-name: el-27;
+				-webkit-animation-duration: 9s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-28 {
+			 from {
+			   	background:rgba(97, 202, 3, 0.3);
+				left:16%;
+				top:48%;
+				width:39px;
+				height:58px;
+				z-index:27;
+				line-height:58px;
+			   	opacity:0.86;
+			  	text-shadow: rgba(36, 81, 16, 0.74) 7px -9px 2px;
+			   	-webkit-transform: scale(0.5) rotate(140deg);
+			 }
+			 to {
+			   	background:rgba(133, 133, 176, 0.85);
+				left:94%;
+				top:86%;
+				width:48px;
+				height:58px;
+				z-index:10;
+				line-height:58px;
+			   	opacity:0.13;
+			  	text-shadow: rgba(81, 30, 89, 0.29) 7px -7px 3px;
+			   	-webkit-transform: scale(1.49) rotate(303deg);				
+			 }
+			}
+			
+			p#el-28 {
+				-webkit-animation-name: el-28;
+				-webkit-animation-duration: 9s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-29 {
+			 from {
+			   	background:rgba(97, 164, 148, 0.19);
+				left:79%;
+				top:33%;
+				width:85px;
+				height:38px;
+				z-index:32;
+				line-height:38px;
+			   	opacity:0.48;
+			  	text-shadow: rgba(81, 3, 99, 0.34) 8px -9px 3px;
+			   	-webkit-transform: scale(1.07) rotate(72deg);
+			 }
+			 to {
+			   	background:rgba(119, 178, 3, 0.76);
+				left:59%;
+				top:30%;
+				width:56px;
+				height:38px;
+				z-index:15;
+				line-height:38px;
+			   	opacity:0.6;
+			  	text-shadow: rgba(43, 13, 38, 0.65) 6px -1px 3px;
+			   	-webkit-transform: scale(1.2) rotate(292deg);				
+			 }
+			}
+			
+			p#el-29 {
+				-webkit-animation-name: el-29;
+				-webkit-animation-duration: 7s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-30 {
+			 from {
+			   	background:rgba(113, 8, 82, 0.46);
+				left:3%;
+				top:65%;
+				width:33px;
+				height:60px;
+				z-index:45;
+				line-height:60px;
+			   	opacity:0.92;
+			  	text-shadow: rgba(74, 9, 39, 0.44) 1px -2px 1px;
+			   	-webkit-transform: scale(0.89) rotate(218deg);
+			 }
+			 to {
+			   	background:rgba(81, 254, 9, 0.44);
+				left:37%;
+				top:68%;
+				width:96px;
+				height:60px;
+				z-index:20;
+				line-height:60px;
+			   	opacity:0.91;
+			  	text-shadow: rgba(63, 20, 47, 0.14) 7px -5px 5px;
+			   	-webkit-transform: scale(0.59) rotate(189deg);				
+			 }
+			}
+			
+			p#el-30 {
+				-webkit-animation-name: el-30;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-31 {
+			 from {
+			   	background:rgba(104, 12, 4, 0.49);
+				left:44%;
+				top:45%;
+				width:67px;
+				height:41px;
+				z-index:30;
+				line-height:41px;
+			   	opacity:0.49;
+			  	text-shadow: rgba(98, 20, 80, 0.97) 3px -3px 4px;
+			   	-webkit-transform: scale(1.42) rotate(68deg);
+			 }
+			 to {
+			   	background:rgba(188, 211, 211, 0.93);
+				left:30%;
+				top:96%;
+				width:66px;
+				height:41px;
+				z-index:40;
+				line-height:41px;
+			   	opacity:0.43;
+			  	text-shadow: rgba(67, 32, 54, 0.93) 8px -6px 10px;
+			   	-webkit-transform: scale(0.71) rotate(8deg);				
+			 }
+			}
+			
+			p#el-31 {
+				-webkit-animation-name: el-31;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-32 {
+			 from {
+			   	background:rgba(158, 229, 199, 0.81);
+				left:70%;
+				top:75%;
+				width:23px;
+				height:84px;
+				z-index:48;
+				line-height:84px;
+			   	opacity:0.1;
+			  	text-shadow: rgba(96, 14, 83, 0.78) 10px -8px 1px;
+			   	-webkit-transform: scale(1.43) rotate(120deg);
+			 }
+			 to {
+			   	background:rgba(223, 91, 1, 0.19);
+				left:89%;
+				top:93%;
+				width:93px;
+				height:84px;
+				z-index:25;
+				line-height:84px;
+			   	opacity:0.88;
+			  	text-shadow: rgba(13, 51, 29, 0.92) 2px -2px 7px;
+			   	-webkit-transform: scale(1.45) rotate(320deg);				
+			 }
+			}
+			
+			p#el-32 {
+				-webkit-animation-name: el-32;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-33 {
+			 from {
+			   	background:rgba(214, 142, 244, 0.97);
+				left:39%;
+				top:74%;
+				width:96px;
+				height:100px;
+				z-index:8;
+				line-height:100px;
+			   	opacity:0.82;
+			  	text-shadow: rgba(87, 49, 70, 0.23) 5px -9px 2px;
+			   	-webkit-transform: scale(0.93) rotate(286deg);
+			 }
+			 to {
+			   	background:rgba(156, 81, 234, 0.13);
+				left:61%;
+				top:83%;
+				width:40px;
+				height:100px;
+				z-index:40;
+				line-height:100px;
+			   	opacity:0.54;
+			  	text-shadow: rgba(20, 68, 99, 0.2) 6px -6px 2px;
+			   	-webkit-transform: scale(1) rotate(336deg);				
+			 }
+			}
+			
+			p#el-33 {
+				-webkit-animation-name: el-33;
+				-webkit-animation-duration: 10s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-34 {
+			 from {
+			   	background:rgba(22, 184, 79, 0.57);
+				left:42%;
+				top:53%;
+				width:24px;
+				height:55px;
+				z-index:16;
+				line-height:55px;
+			   	opacity:0.66;
+			  	text-shadow: rgba(49, 10, 27, 0.8) 1px -4px 5px;
+			   	-webkit-transform: scale(1.35) rotate(232deg);
+			 }
+			 to {
+			   	background:rgba(52, 99, 216, 0.88);
+				left:38%;
+				top:4%;
+				width:52px;
+				height:55px;
+				z-index:47;
+				line-height:55px;
+			   	opacity:0.19;
+			  	text-shadow: rgba(90, 85, 9, 0.35) 10px -9px 7px;
+			   	-webkit-transform: scale(1.01) rotate(80deg);				
+			 }
+			}
+			
+			p#el-34 {
+				-webkit-animation-name: el-34;
+				-webkit-animation-duration: 4s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-35 {
+			 from {
+			   	background:rgba(134, 217, 13, 0.62);
+				left:12%;
+				top:85%;
+				width:71px;
+				height:65px;
+				z-index:26;
+				line-height:65px;
+			   	opacity:0.26;
+			  	text-shadow: rgba(48, 16, 46, 0.86) 1px -4px 3px;
+			   	-webkit-transform: scale(0.54) rotate(273deg);
+			 }
+			 to {
+			   	background:rgba(42, 59, 169, 0.02);
+				left:32%;
+				top:1%;
+				width:96px;
+				height:65px;
+				z-index:6;
+				line-height:65px;
+			   	opacity:0.66;
+			  	text-shadow: rgba(45, 34, 85, 0.02) 9px -8px 1px;
+			   	-webkit-transform: scale(0.98) rotate(296deg);				
+			 }
+			}
+			
+			p#el-35 {
+				-webkit-animation-name: el-35;
+				-webkit-animation-duration: 10s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-36 {
+			 from {
+			   	background:rgba(86, 47, 151, 0.49);
+				left:65%;
+				top:46%;
+				width:60px;
+				height:29px;
+				z-index:50;
+				line-height:29px;
+			   	opacity:0.7;
+			  	text-shadow: rgba(54, 75, 86, 0.76) 5px -9px 1px;
+			   	-webkit-transform: scale(0.92) rotate(298deg);
+			 }
+			 to {
+			   	background:rgba(51, 22, 72, 0.54);
+				left:93%;
+				top:30%;
+				width:52px;
+				height:29px;
+				z-index:32;
+				line-height:29px;
+			   	opacity:0.37;
+			  	text-shadow: rgba(88, 46, 29, 0.99) 8px -5px 6px;
+			   	-webkit-transform: scale(0.79) rotate(43deg);				
+			 }
+			}
+			
+			p#el-36 {
+				-webkit-animation-name: el-36;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-37 {
+			 from {
+			   	background:rgba(30, 190, 82, 0.87);
+				left:61%;
+				top:9%;
+				width:43px;
+				height:83px;
+				z-index:25;
+				line-height:83px;
+			   	opacity:0.17;
+			  	text-shadow: rgba(71, 31, 37, 0.79) 6px -10px 8px;
+			   	-webkit-transform: scale(1.39) rotate(110deg);
+			 }
+			 to {
+			   	background:rgba(95, 66, 50, 0.83);
+				left:55%;
+				top:19%;
+				width:70px;
+				height:83px;
+				z-index:1;
+				line-height:83px;
+			   	opacity:0.78;
+			  	text-shadow: rgba(91, 14, 82, 0.7) 3px -6px 1px;
+			   	-webkit-transform: scale(0.62) rotate(63deg);				
+			 }
+			}
+			
+			p#el-37 {
+				-webkit-animation-name: el-37;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-38 {
+			 from {
+			   	background:rgba(169, 69, 30, 0.96);
+				left:63%;
+				top:91%;
+				width:65px;
+				height:53px;
+				z-index:27;
+				line-height:53px;
+			   	opacity:0.64;
+			  	text-shadow: rgba(45, 84, 2, 0.7) 1px -9px 3px;
+			   	-webkit-transform: scale(0.72) rotate(171deg);
+			 }
+			 to {
+			   	background:rgba(68, 2, 100, 0.4);
+				left:83%;
+				top:9%;
+				width:73px;
+				height:53px;
+				z-index:20;
+				line-height:53px;
+			   	opacity:0.11;
+			  	text-shadow: rgba(77, 58, 21, 0.19) 3px -5px 4px;
+			   	-webkit-transform: scale(0.7) rotate(38deg);				
+			 }
+			}
+			
+			p#el-38 {
+				-webkit-animation-name: el-38;
+				-webkit-animation-duration: 4s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-39 {
+			 from {
+			   	background:rgba(164, 219, 53, 0.49);
+				left:87%;
+				top:91%;
+				width:62px;
+				height:81px;
+				z-index:36;
+				line-height:81px;
+			   	opacity:0.16;
+			  	text-shadow: rgba(74, 19, 42, 0.75) 6px -9px 6px;
+			   	-webkit-transform: scale(1.17) rotate(172deg);
+			 }
+			 to {
+			   	background:rgba(251, 199, 66, 0.56);
+				left:98%;
+				top:44%;
+				width:84px;
+				height:81px;
+				z-index:24;
+				line-height:81px;
+			   	opacity:0.74;
+			  	text-shadow: rgba(99, 57, 95, 0.76) 3px -9px 10px;
+			   	-webkit-transform: scale(1.2) rotate(247deg);				
+			 }
+			}
+			
+			p#el-39 {
+				-webkit-animation-name: el-39;
+				-webkit-animation-duration: 10s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-40 {
+			 from {
+			   	background:rgba(103, 9, 247, 0.59);
+				left:45%;
+				top:71%;
+				width:34px;
+				height:37px;
+				z-index:14;
+				line-height:37px;
+			   	opacity:0.3;
+			  	text-shadow: rgba(84, 75, 28, 0.62) 1px -9px 7px;
+			   	-webkit-transform: scale(0.95) rotate(226deg);
+			 }
+			 to {
+			   	background:rgba(19, 51, 160, 0.64);
+				left:16%;
+				top:39%;
+				width:89px;
+				height:37px;
+				z-index:49;
+				line-height:37px;
+			   	opacity:0.35;
+			  	text-shadow: rgba(56, 66, 23, 0.77) 1px -3px 8px;
+			   	-webkit-transform: scale(1.16) rotate(257deg);				
+			 }
+			}
+			
+			p#el-40 {
+				-webkit-animation-name: el-40;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-41 {
+			 from {
+			   	background:rgba(253, 193, 173, 0.74);
+				left:4%;
+				top:30%;
+				width:81px;
+				height:87px;
+				z-index:44;
+				line-height:87px;
+			   	opacity:0.91;
+			  	text-shadow: rgba(21, 49, 98, 0.41) 2px -7px 6px;
+			   	-webkit-transform: scale(1) rotate(176deg);
+			 }
+			 to {
+			   	background:rgba(137, 218, 12, 0.2);
+				left:9%;
+				top:82%;
+				width:40px;
+				height:87px;
+				z-index:18;
+				line-height:87px;
+			   	opacity:0.56;
+			  	text-shadow: rgba(91, 6, 2, 0.74) 1px -8px 5px;
+			   	-webkit-transform: scale(1.3) rotate(289deg);				
+			 }
+			}
+			
+			p#el-41 {
+				-webkit-animation-name: el-41;
+				-webkit-animation-duration: 8s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-42 {
+			 from {
+			   	background:rgba(171, 161, 195, 0.17);
+				left:61%;
+				top:18%;
+				width:42px;
+				height:64px;
+				z-index:13;
+				line-height:64px;
+			   	opacity:0.73;
+			  	text-shadow: rgba(78, 73, 28, 0.64) 8px -5px 8px;
+			   	-webkit-transform: scale(1.1) rotate(260deg);
+			 }
+			 to {
+			   	background:rgba(18, 40, 161, 0.13);
+				left:18%;
+				top:37%;
+				width:33px;
+				height:64px;
+				z-index:48;
+				line-height:64px;
+			   	opacity:0.79;
+			  	text-shadow: rgba(96, 74, 51, 0.52) 5px -2px 3px;
+			   	-webkit-transform: scale(1.08) rotate(271deg);				
+			 }
+			}
+			
+			p#el-42 {
+				-webkit-animation-name: el-42;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-43 {
+			 from {
+			   	background:rgba(255, 49, 167, 0.73);
+				left:47%;
+				top:30%;
+				width:61px;
+				height:90px;
+				z-index:47;
+				line-height:90px;
+			   	opacity:0.02;
+			  	text-shadow: rgba(11, 65, 9, 0.26) 3px -3px 5px;
+			   	-webkit-transform: scale(1.16) rotate(137deg);
+			 }
+			 to {
+			   	background:rgba(97, 113, 89, 0.13);
+				left:94%;
+				top:86%;
+				width:63px;
+				height:90px;
+				z-index:5;
+				line-height:90px;
+			   	opacity:0.15;
+			  	text-shadow: rgba(13, 83, 60, 0.99) 9px -8px 7px;
+			   	-webkit-transform: scale(1.07) rotate(93deg);				
+			 }
+			}
+			
+			p#el-43 {
+				-webkit-animation-name: el-43;
+				-webkit-animation-duration: 10s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-44 {
+			 from {
+			   	background:rgba(49, 244, 47, 0.84);
+				left:4%;
+				top:44%;
+				width:30px;
+				height:26px;
+				z-index:13;
+				line-height:26px;
+			   	opacity:0.87;
+			  	text-shadow: rgba(78, 63, 26, 0.23) 10px -4px 2px;
+			   	-webkit-transform: scale(1.35) rotate(332deg);
+			 }
+			 to {
+			   	background:rgba(67, 253, 12, 0.1);
+				left:59%;
+				top:4%;
+				width:95px;
+				height:26px;
+				z-index:20;
+				line-height:26px;
+			   	opacity:0.68;
+			  	text-shadow: rgba(50, 65, 61, 0.58) 9px -6px 8px;
+			   	-webkit-transform: scale(1.19) rotate(220deg);				
+			 }
+			}
+			
+			p#el-44 {
+				-webkit-animation-name: el-44;
+				-webkit-animation-duration: 4s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-45 {
+			 from {
+			   	background:rgba(220, 20, 152, 0.49);
+				left:33%;
+				top:81%;
+				width:57px;
+				height:85px;
+				z-index:36;
+				line-height:85px;
+			   	opacity:0.98;
+			  	text-shadow: rgba(31, 63, 25, 0.3) 7px -4px 9px;
+			   	-webkit-transform: scale(1.21) rotate(101deg);
+			 }
+			 to {
+			   	background:rgba(73, 100, 200, 0.93);
+				left:1%;
+				top:36%;
+				width:82px;
+				height:85px;
+				z-index:29;
+				line-height:85px;
+			   	opacity:0.12;
+			  	text-shadow: rgba(46, 19, 32, 0.27) 1px -4px 9px;
+			   	-webkit-transform: scale(1.04) rotate(259deg);				
+			 }
+			}
+			
+			p#el-45 {
+				-webkit-animation-name: el-45;
+				-webkit-animation-duration: 8s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-46 {
+			 from {
+			   	background:rgba(110, 171, 80, 0.06);
+				left:91%;
+				top:61%;
+				width:79px;
+				height:20px;
+				z-index:14;
+				line-height:20px;
+			   	opacity:0.51;
+			  	text-shadow: rgba(45, 54, 79, 0.83) 4px -8px 9px;
+			   	-webkit-transform: scale(1.19) rotate(178deg);
+			 }
+			 to {
+			   	background:rgba(108, 205, 243, 0.61);
+				left:12%;
+				top:22%;
+				width:72px;
+				height:20px;
+				z-index:26;
+				line-height:20px;
+			   	opacity:0.08;
+			  	text-shadow: rgba(19, 23, 75, 0.19) 7px -5px 6px;
+			   	-webkit-transform: scale(1.21) rotate(121deg);				
+			 }
+			}
+			
+			p#el-46 {
+				-webkit-animation-name: el-46;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-47 {
+			 from {
+			   	background:rgba(154, 158, 229, 0.15);
+				left:41%;
+				top:73%;
+				width:58px;
+				height:56px;
+				z-index:7;
+				line-height:56px;
+			   	opacity:0.57;
+			  	text-shadow: rgba(16, 62, 99, 0.95) 6px -7px 1px;
+			   	-webkit-transform: scale(1.29) rotate(91deg);
+			 }
+			 to {
+			   	background:rgba(147, 221, 113, 0.8);
+				left:62%;
+				top:63%;
+				width:56px;
+				height:56px;
+				z-index:3;
+				line-height:56px;
+			   	opacity:0.14;
+			  	text-shadow: rgba(17, 38, 25, 0.61) 10px -9px 6px;
+			   	-webkit-transform: scale(0.62) rotate(95deg);				
+			 }
+			}
+			
+			p#el-47 {
+				-webkit-animation-name: el-47;
+				-webkit-animation-duration: 4s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-48 {
+			 from {
+			   	background:rgba(100, 208, 192, 0.02);
+				left:81%;
+				top:70%;
+				width:67px;
+				height:68px;
+				z-index:21;
+				line-height:68px;
+			   	opacity:0.77;
+			  	text-shadow: rgba(37, 66, 35, 0.24) 2px -2px 9px;
+			   	-webkit-transform: scale(1.24) rotate(217deg);
+			 }
+			 to {
+			   	background:rgba(229, 223, 197, 0.28);
+				left:12%;
+				top:39%;
+				width:41px;
+				height:68px;
+				z-index:49;
+				line-height:68px;
+			   	opacity:0.89;
+			  	text-shadow: rgba(39, 24, 14, 0.98) 7px -10px 8px;
+			   	-webkit-transform: scale(1.14) rotate(273deg);				
+			 }
+			}
+			
+			p#el-48 {
+				-webkit-animation-name: el-48;
+				-webkit-animation-duration: 6s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+			@-webkit-keyframes el-49 {
+			 from {
+			   	background:rgba(43, 53, 151, 0.83);
+				left:56%;
+				top:82%;
+				width:96px;
+				height:37px;
+				z-index:36;
+				line-height:37px;
+			   	opacity:0.68;
+			  	text-shadow: rgba(68, 31, 57, 0.55) 1px -9px 7px;
+			   	-webkit-transform: scale(0.96) rotate(40deg);
+			 }
+			 to {
+			   	background:rgba(164, 91, 127, 0.88);
+				left:49%;
+				top:48%;
+				width:61px;
+				height:37px;
+				z-index:22;
+				line-height:37px;
+			   	opacity:0.21;
+			  	text-shadow: rgba(16, 19, 64, 0.38) 4px -9px 10px;
+			   	-webkit-transform: scale(0.69) rotate(146deg);				
+			 }
+			}
+			
+			p#el-49 {
+				-webkit-animation-name: el-49;
+				-webkit-animation-duration: 9s;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-iteration-count: infinite;
+			}
+			
+		
+	</style>
+	
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-898831-7']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+</head>
+<body>
+	<h1>CSS3 transitions</h1>
+	
+			<p id="el-0" class="el">0</p>			
+		
+			<p id="el-1" class="el">1</p>			
+		
+			<p id="el-2" class="el">2</p>			
+		
+			<p id="el-3" class="el">3</p>			
+		
+			<p id="el-4" class="el">4</p>			
+		
+			<p id="el-5" class="el">5</p>			
+		
+			<p id="el-6" class="el">6</p>			
+		
+			<p id="el-7" class="el">7</p>			
+		
+			<p id="el-8" class="el">8</p>			
+		
+			<p id="el-9" class="el">9</p>			
+		
+			<p id="el-10" class="el">10</p>			
+		
+			<p id="el-11" class="el">11</p>			
+		
+			<p id="el-12" class="el">12</p>			
+		
+			<p id="el-13" class="el">13</p>			
+		
+			<p id="el-14" class="el">14</p>			
+		
+			<p id="el-15" class="el">15</p>			
+		
+			<p id="el-16" class="el">16</p>			
+		
+			<p id="el-17" class="el">17</p>			
+		
+			<p id="el-18" class="el">18</p>			
+		
+			<p id="el-19" class="el">19</p>			
+		
+			<p id="el-20" class="el">20</p>			
+		
+			<p id="el-21" class="el">21</p>			
+		
+			<p id="el-22" class="el">22</p>			
+		
+			<p id="el-23" class="el">23</p>			
+		
+			<p id="el-24" class="el">24</p>			
+		
+			<p id="el-25" class="el">25</p>			
+		
+			<p id="el-26" class="el">26</p>			
+		
+			<p id="el-27" class="el">27</p>			
+		
+			<p id="el-28" class="el">28</p>			
+		
+			<p id="el-29" class="el">29</p>			
+		
+			<p id="el-30" class="el">30</p>			
+		
+			<p id="el-31" class="el">31</p>			
+		
+			<p id="el-32" class="el">32</p>			
+		
+			<p id="el-33" class="el">33</p>			
+		
+			<p id="el-34" class="el">34</p>			
+		
+			<p id="el-35" class="el">35</p>			
+		
+			<p id="el-36" class="el">36</p>			
+		
+			<p id="el-37" class="el">37</p>			
+		
+			<p id="el-38" class="el">38</p>			
+		
+			<p id="el-39" class="el">39</p>			
+		
+			<p id="el-40" class="el">40</p>			
+		
+			<p id="el-41" class="el">41</p>			
+		
+			<p id="el-42" class="el">42</p>			
+		
+			<p id="el-43" class="el">43</p>			
+		
+			<p id="el-44" class="el">44</p>			
+		
+			<p id="el-45" class="el">45</p>			
+		
+			<p id="el-46" class="el">46</p>			
+		
+			<p id="el-47" class="el">47</p>			
+		
+			<p id="el-48" class="el">48</p>			
+		
+			<p id="el-49" class="el">49</p>			
+				
+</body>
+</html>

@@ -1,0 +1,78 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head> <title>Test</title>
+<script type="text/javascript"> 
+var ms = 0; 
+var ts = 0; 
+var sec = 0; 
+var min = 0;
+var hr = 0;
+function stopwatch() {
+	
+	var box1 = document.getElementById('one');
+	var box2 = document.getElementById('two');
+	var box3 = document.getElementById('three');
+	var box4 = document.getElementById('four');
+	var bodyEle = document.getElementById('body');
+	//console.log(box4);
+    
+    ms++;
+    if (ms == 60) { 
+        ms = 0; 
+        ts += 1;
+    } 
+    if (ts == 60) {
+        ts = 0;
+        sec += 1;
+		bodyEle.className = "two";
+		setTimeout(function(){
+			bodyEle.className = "";
+		},1000);
+    }
+    if (sec == 60) {
+        sec = 0;
+        min += 1;
+		bodyEle.className = "three";
+		setTimeout(function(){
+			bodyEle.className = "";
+		},500);
+    }
+    totalTime = "<span id='one' class='box'>" + ((min<=9) ? "0" + min : min) + "</span>  <span id='two' class='box'>" + ((sec<=9) ? "0" + sec : sec) + "</span>  <span id='three' class='box'>" + ((ts<=9) ? "0" + ts : ts) + "</span>  <span id='four' class='box'>" + ((ms<=9) ? "0" + ms : ms) + "</span>";
+    
+    document.getElementById("timer").innerHTML = totalTime; 
+    start = setTimeout("stopwatch()", 1);
+
+}
+     
+</script>
+<style>
+body{
+	font-size: 600%;
+	text-align: center;
+	margin: 1em;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: #333;}
+#one,
+#two,
+#three,
+#four{background:white;}
+.one #four{background:#FFF;}
+.two #three{background:#CCC;}
+.three #two{background:#AAA;}
+.four #one{background:#999;}
+#timer{}
+.box{
+	background: #EEE;
+	border-radius: 5px;
+	padding: 0.2em;
+	box-shadow: 0 72px 5px rgba(255, 255, 255, 0.7) inset,0 -22px 25px rgba(0, 0, 0, 0.1) inset, 0 0 5px rgba(0, 0, 0, 0.4) inset, 4px 4px 25px rgba(0, 0, 0, 0.4),0 0 5px rgba(0, 0, 0, 0.4);
+	text-shadow: 0 3px 3px rgba(0, 0, 0, 0.3),0 -1px 0 rgba(255, 255, 255, 1);
+}
+
+</style>
+</head>
+<body id="body" onload="stopwatch();">
+    <div id="timer" style="-webkit-transition: -webkit-transform 1s ease-in" onclick="this.style.webkitTransform='left:-1000px'"></div>
+</body>
+</html>
