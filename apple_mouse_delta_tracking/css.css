@@ -3,43 +3,47 @@ body{
 	top: 0;
 	bottom: 0;
 	left: 0;
-	right: 0;}
+	right: 0;
+	font-family:sans-serif}
 #debug{
 	position: absolute;
 	left: 0;
 	top: 0;
 	bottom: 0;
 	right: 80%;
-	background: black;
-	padding: 2em;
+	background: white;
+	padding: 0;
 }
 #debug p{
 	padding: 1em;
-	margin: 0.5em;
+	margin: 1px;
 	background: whiteSmoke;
 	float: left;
 	text-align: center;
 	line-height: 40px;
-	border-radius: 100px;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8), 0 1px 0 rgba(255, 255, 255, 1);
 	height: 40px;
 	width: 40px;
 	min-height: 40px;
-	letter-spacing:2px}
-#debug p.highlighted{background:#AAA}
-#debug p#pos.highlighted,
-#debug p#neg.highlighted{background:#222;color:whitesmoke}
+	-webkit-transition: opacity 0.3s linear;
+	-moz-transition: opacity 0.3s linear;
+	-o-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear;
+	font-size: 12px;
+	display:none}
+.hl_w p#left{background:red}
+.hl_e p#right{background:red}
+.hl_n p#down{background:red}
+.hl_s p#up{background:red}
 #outputContainer{
 	position: absolute;
 	width: auto;
-	min-height: 500px;
 	background: whiteSmoke;
 	float: left;
 	overflow: hidden;
 	opacity: 0.8;
 	top: 0;
 	bottom: 0;
-	left: 20%;
+	left: 34%;
 	right: 0;}
 #output{
 	float:left;
@@ -52,11 +56,126 @@ body{
 	right: 0%;
 	bottom: 0%;
 	*/
-	height:100px;
-	width:100px;
-	border-radius:3px;
-	background: red;
-	opacity:0.8;
+	height: 30px;
+	width: 30px;
+	border-radius: 25px;
+	background: white;
+	opacity: 0.8;
+	border: 10px solid rgba(255, 0, 0, 0.3);
+}
+#mouseImage{
+	width: 305px;
+	height: 400px;
+	background: url(mouse.png) no-repeat;
+	clear: both;
+	position: relative;
+	top: 23px;
+}
+#mouseImage span{
+	display: block;
+	background-image: url(mouse.png);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s linear;
+	-moz-transition: opacity 0.3s linear;
+	-o-transition: opacity 0.3s linear;
+	transition: opacity 0.3s linear;
+}
+#ind{
+	top: 40px;
+	left: 78px;
+	width: 160px;
+	height: 160px;
+	background-position: -384px -40px;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+#w{
+	top: 86px;
+	left: 74px;
+	width: 71px;
+	height: 75px;
+	background-position: -311px -247px;
+}
+#e{
+	top: 86px;
+	left: 174px;
+	width: 71px;
+	height: 75px;
+	background-position: -540px -247px;
+}
+#s{
+	top: 34px;
+	left: 121px;
+	width: 71px;
+	height: 75px;
+	background-position: -382px -247px;
+}
+#n{
+	top: 137px;
+	left: 114px;
+	width: 71px;
+	height: 75px;
+	background-position: -453px -247px;
+}
+#nw{
+	top: 49px;
+	left: 90px;
+	width: 71px;
+	height: 75px;
+	background-position: -382px -322px;
+}
+#ne{
+	top: 47px;
+	left: 154px;
+	width: 71px;
+	height: 75px;
+	background-position: -540px -322px;
+}
+#sw{
+	top: 115px;
+	left: 100px;
+	width: 71px;
+	height: 75px;
+	background-position: -311px -322px;
+}
+#se{
+	top: 116px;
+	left: 149px;
+	width: 71px;
+	height: 75px;
+	background-position: -453px -322px;
+}
+.hl_w #w{opacity:1}
+.hl_e #e{opacity:1}
+.hl_n #n{opacity:1}
+.hl_s #s{opacity:1}
+.hl_nw #nw{opacity:1}
+.hl_ne #ne{opacity:1}
+.hl_sw #sw{opacity:1}
+.hl_se #se{opacity:1}
+.hl_w #ind,
+.hl_e #ind,
+.hl_n #ind,
+.hl_s #ind,
+.hl_nw #ind,
+.hl_ne #ind,
+.hl_sw #ind,
+.hl_se #ind{opacity:1}
+#activityStore{
+	position: fixed;
+	height: 100px;
+	background: black;
+	bottom: 0;
+	color: white;
+	font-family: monospace;
+	padding: 1em;
+	overflow: scroll;
+	display:none;
 }
 /*
 div#output.down{height:200px}

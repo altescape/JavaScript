@@ -1,0 +1,136 @@
+<!DOCTYPE>
+<html>
+	<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>
+	// check for attachevent and all that
+	function addEvent(obj, evType, fn){ 
+		if (obj.addEventListener){ 
+			obj.addEventListener(evType, fn, false); 
+			return true; 
+		} else if (obj.attachEvent){ 
+			var r = obj.attachEvent("on"+evType, fn); 
+			return r; 
+		} else { 
+			return false; 
+		} 
+	}
+	//event listening
+	addEvent(window, 'load', getElements);
+	addEvent(window, 'load', dec_all_canvas);
+	
+	//
+	// initialise objects here for global scope
+	// create emitter object
+	function emitter(name, co2){
+		this.name = name;
+		this.co2 = co2;
+	}
+	// the objects		
+	var cpu = new emitter('Computer for a year', 138);
+	var tv = new emitter('Watching TV (28in)', 140);
+	var mobile = new emitter('1hr of mobile calls for a year', 1250);
+	var shuttle = new emitter('1 space shuttle flight', 4600000);
+	var searches = new emitter('Worlds web searches world for a year', 22600000);
+	var etna = new emitter('Mnt Etna', 1000000000);
+	var wow = new emitter('Playing WOW for a year', 2700000000);
+	var xbox = new emitter('XBox Live for a year', 2700000000);
+	var olympics = new emitter('London 2012 (projected)', 3400000000);
+	var fb = new emitter('Facebook yearly footprint', 13600000000);
+	var cars = new emitter('All cars in UK for a year', 18300000000);
+	var skype = new emitter('Skype yearly footprint', 24000000000);
+	var datacentres = new emitter('Data centres worldwide', 130000000000);
+	var internet = new emitter('Internet', 300000000000);
+	var flights = new emitter('All flights worldwide', 670000000000);
+	
+	
+	function getElements(){
+		var info = document.getElementById('info');
+		var canvasHolder = document.getElementById('infographic');
+		var cpu = document.getElementById('cpu');
+		var tv = document.getElementById('tv');
+		var mobile = document.getElementById('mobile');
+		var shuttle = document.getElementById('shuttle');
+		var searches = document.getElementById('searches');
+		var etna = document.getElementById('etna');
+		var wow = document.getElementById('wow');
+		var xbox = document.getElementById('xbox');
+		var olympics = document.getElementById('olympics');
+		var fb = document.getElementById('fb');
+		var cars = document.getElementById('cars');
+		var skype = document.getElementById('skype');
+		var datacentres = document.getElementById('datacentres');
+		var internet = document.getElementById('internet');
+		var flights = document.getElementById('flights');
+	}
+	
+	function dec_all_canvas(){
+		paintCanvas('cpu',cpu.name, cpu.co2);
+		paintCanvas('tv',tv.name, tv.co2);
+		paintCanvas('mobile',mobile.name, mobile.co2);
+		paintCanvas('shuttle',shuttle.name, shuttle.co2);
+		paintCanvas('searches',searches.name, searches.co2);
+	}
+	function draw(){
+	  var canvas = document.getElementById('tv');
+	  if (canvas.getContext){
+	    var ctx = canvas.getContext('2d');
+
+	    ctx.fillRect(25,25,100,100);
+	    ctx.clearRect(45,45,60,60);
+	    ctx.strokeRect(50,50,50,50);
+	  }
+	}
+	function paintCanvas(ele, name, co2){
+		var canvas = document.getElementById(ele);
+		  if (canvas.getContext){
+		    var ctx = canvas.getContext('2d');
+			ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+		    ctx.fillRect(0,0,290,290);
+		  }
+		canvas.setAttribute('date-name', name);
+		canvas.setAttribute('date-co2', co2);
+	}
+	</script>
+		
+	<style>
+		#info canvas{width:150px; height: 150px;border:1px solid whitesmoke; -webkit-transition:all 0.5s linear}
+	</style>
+	</head>
+	<body>
+		<div id="info">
+			<canvas id="cpu"></canvas>
+			<canvas id="tv"></canvas>
+			<canvas id="mobile"></canvas>
+			<canvas id="shuttle"></canvas>
+			<canvas id="searches"></canvas>
+			<canvas id="etna"></canvas>
+			<canvas id="wow"></canvas>
+			<canvas id="xbox"></canvas>
+			<canvas id="olympics"></canvas>
+			<canvas id="fb"></canvas>
+			<canvas id="cars"></canvas>
+			<canvas id="skype"></canvas>
+			<canvas id="datacentres"></canvas>
+			<canvas id="internet"></canvas>
+			<canvas id="flights"></canvas>
+		</div>
+		<!--div id="infographic">
+			<canvas id="cpu" data-name="Computer for a year" data-co2="138.000"></canvas>
+			<canvas id="tv" data-name="Watching TV (28in)" data-co2="140.000"></canvas>
+			<canvas id="mobile" data-name="1hr of mobile calls for a year" data-co2="1,250.000"></canvas>
+			<canvas id="shuttle" data-name="1 space shuttle flight" data-co2="4,600,000.000"></canvas>
+			<canvas id="searches" data-name="Worlds web searches world for a year" data-co2="22,600,000.000"></canvas>
+			<canvas id="etna" data-name="Mnt Etna" data-co2="1,000,000,000.000"></canvas>
+			<canvas id="wow" data-name="Playing WOW for a year" data-co2="2,700,000,000.000"></canvas>
+			<canvas id="xbox" data-name="XBox Live for a year" data-co2="2,700,000,000.000"></canvas>
+			<canvas id="olympics" data-name="London 2012 (projected)" data-co2="3,400,000,000.000"></canvas>
+			<canvas id="fb" data-name="Facebook yearly footprint" data-co2="13,600,000,000.000"></canvas>
+			<canvas id="cars" data-name="All cars in UK for a year" data-co2="18,300,000,000.000"></canvas>
+			<canvas id="skype" data-name="Skype yearly footprint" data-co2="24,000,000,000.000"></canvas>
+			<canvas id="datacentres" data-name="Data centres worldwide" data-co2="130,000,000,000.000"></canvas>
+			<canvas id="internet" data-name="Internet" data-co2="300,000,000,000.000"></canvas>
+			<canvas id="flights" data-name="All flights worldwide" data-co2="670,000,000,000.000"></canvas>
+		</div-->
+	</body>
+</html>
